@@ -1,0 +1,7 @@
+{
+  "name": "bridgeAppV2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
