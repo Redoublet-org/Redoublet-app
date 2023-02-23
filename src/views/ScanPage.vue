@@ -3,15 +3,15 @@
       <ion-header>
         <ion-toolbar>
             <ion-buttons slot="start">
-                <ion-back-button default-href="/login" routerDirection="backward"></ion-back-button>
+                <ion-back-button default-href="/home" routerDirection="backward"></ion-back-button>
             </ion-buttons>
-            <ion-title>Register </ion-title>
+            <ion-title>Scan </ion-title>
         </ion-toolbar>
       </ion-header>
   
       <ion-content ref="content">
         <ion-item>
-          <ion-button router-link="/login" router-direction="backward" >Register</ion-button>
+          <ion-button router-link="/home" router-direction="backward" >Back</ion-button>
         </ion-item>
 
       </ion-content>
@@ -24,7 +24,7 @@
     import { useRouter } from 'vue-router';
   
     export default defineComponent({
-      name: 'RegisterPage',
+      name: 'ScanPage',
       components: {
         IonContent,
         IonHeader,

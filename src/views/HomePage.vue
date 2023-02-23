@@ -5,7 +5,7 @@
            <ion-title>Home Page</ion-title>
         </ion-toolbar>
       </ion-header>
-  
+
       <ion-content>
         <ion-list>
             <ion-item>
@@ -24,7 +24,7 @@
   </template>
     
     <script>
-    import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+    import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
     import { defineComponent, ref } from 'vue';
     import { useRouter } from 'vue-router';
   
@@ -35,7 +35,8 @@
         IonHeader,
         IonPage,
         IonTitle,
-        IonToolbar
+        IonToolbar,
+        IonButton
         },
       setup() {
   
