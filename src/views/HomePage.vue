@@ -12,7 +12,7 @@
               <ion-button router-link="/new-competition" router-direction="forward" >New Competition</ion-button>
             </ion-item>
             <ion-item>
-              <ion-button router-link="/join-tournament" router-direction="forward" >Join Tournament</ion-button>
+              <ion-button router-link="/join-tournament/search" router-direction="forward" >Join Tournament</ion-button>
             </ion-item>
             <ion-item>
               <ion-button router-link="/scan" router-direction="forward" >Scan hand</ion-button>
