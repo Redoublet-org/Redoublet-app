@@ -28,9 +28,35 @@ const routes: Array<RouteRecordRaw> = [
     component: RegisterPage
   },
   {
-    path: '/new-competition',
-    name: 'NewCompetition',
-    component: NewCompPage
+    path: '/new-tournament',
+    name: 'NewTournamentPage',
+    component: () => import("@/views/NewTourPage.vue")
+  },
+  {
+    path: '/new-tournament/single-table',
+    name: 'SingleTablePage',
+    component: () => import("@/views/NewTournament/SingleTablePage.vue")
+  },
+  {
+    path: '/new-tournament/enter-board/:tableSettings',
+    name: 'EnterBoardPage',
+    component: () => import("@/views/NewTournament/EnterBoardPage.vue"),
+    props: true
+  },
+  {
+    path: '/new-tournament/board-score',
+    name: 'SingleTableScore',
+    component: () => import("@/views/NewTournament/SingleTableScore.vue")
+  },
+  {
+    path: '/new-tournament/board-dds',
+    name: 'SingleTableDDS',
+    component: () => import("@/views/NewTournament/SingleTableDDS.vue")
+  },
+  {
+    path: '/new-tournament/board-table',
+    name: 'Table',
+    component: () => import("@/views/NewTournament/SingleTableScoreTable.vue")
   },
   {
     path: '/join-tournament',
@@ -41,8 +67,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/scan',
     name: 'Scan',
     component: ScanPage
-  }
-
+  },
 ]
 
 const router = createRouter({

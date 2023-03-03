@@ -9,7 +9,7 @@
       <ion-content>
         <ion-list>
             <ion-item>
-              <ion-button router-link="/new-competition" router-direction="forward" >New Competition</ion-button>
+              <ion-button router-link="/new-tournament" router-direction="forward" >New Tournament</ion-button>
             </ion-item>
             <ion-item>
               <ion-button router-link="/join-tournament" router-direction="forward" >Join Tournament</ion-button>
