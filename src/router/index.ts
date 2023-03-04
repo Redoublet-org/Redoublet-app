@@ -12,13 +12,13 @@ import OpenToursPage from '../views/JoinTournament/OpenToursPage.vue';
 import WaitForTourStartPage from '../views/JoinTournament/WaitForTourStartPage.vue';
 import WalkingSchemePage from '../views/JoinTournament/WalkingSchemePage.vue';
 import InputScorePage from '../views/JoinTournament/InputScorePage.vue';
-/*import ScanHandsSouthPage from '../views/JoinTournament/ScanHandsSouthPage.vue';
+import ScanHandsSouthPage from '../views/JoinTournament/ScanHandsSouthPage.vue';
 import ScanHandsWestPage from '../views/JoinTournament/ScanHandsWestPage.vue';
 import ScanHandsNorthPage from '../views/JoinTournament/ScanHandsNorthPage.vue';
 import ScanHandsEastPage from '../views/JoinTournament/ScanHandsEastPage.vue';
 import ScoringDDSPage from '../views/JoinTournament/ScoringDDSPage.vue';
 import WaitForTourEndPage from '../views/JoinTournament/WaitForTourEndPage.vue';
-import TourEndedPage from '../views/JoinTournament/TourEndedPage.vue'; */
+import TourEndedPage from '../views/JoinTournament/TourEndedPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -80,24 +80,24 @@ const routes: Array<RouteRecordRaw> = [
     name: 'InputScore',
     component: InputScorePage
   },
-  /*{
+  {
     path: '/join-tournament/scan-hand-south',
-    name: 'ScanHandsTour',
+    name: 'ScanHandsSouthTour',
     component: ScanHandsSouthPage
   },
   {
     path: '/join-tournament/scan-hand-west',
-    name: 'ScanHandsTour',
+    name: 'ScanHandsWestTour',
     component: ScanHandsWestPage
   },
   {
     path: '/join-tournament/scan-hand-north',
-    name: 'ScanHandsTour',
+    name: 'ScanHandsNorthTour',
     component: ScanHandsNorthPage
   },
   {
     path: '/join-tournament/scan-hand-east',
-    name: 'ScanHandsTour',
+    name: 'ScanHandsEastTour',
     component: ScanHandsEastPage
   },
   {
@@ -114,7 +114,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/join-tournament/end',
     name: 'TournamentEnded',
     component: TourEndedPage
-  }*/
+  }
 
 ]
 

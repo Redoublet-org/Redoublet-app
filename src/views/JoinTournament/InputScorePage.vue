@@ -5,50 +5,78 @@
         <ion-buttons slot="start">
           <ion-back-button default-href="/home" routerDirection="backward"></ion-back-button>
         </ion-buttons>
-        <ion-title>Name tournament</ion-title>
+        <ion-title>Scoring</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Name tournament</ion-title>
+          <ion-title size="large">Scoring - Board #9</ion-title>
         </ion-toolbar>
       </ion-header>
 
       <ion-list>
         <ion-item>
-          <ion-text>Table: 3</ion-text>
+          <ion-text>Contract</ion-text>
         </ion-item>
 
         <ion-item>
-          <ion-text>Details</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-text>North - South</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-text>Pair [#]: name & name</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-text>Board 11</ion-text>
-        </ion-item>
-
-        <ion-item>
-          <ion-text> Game details </ion-text>
-        </ion-item>
-
-        <ion-item>
-          <ion-label position="floating">Vulnerable</ion-label>
-          <ion-select placeholder="Select vulnerability">
-            <ion-select-option value="North-South">North-South</ion-select-option>
-            <ion-select-option value="East-West">East-West</ion-select-option>
-            <ion-select-option value="None">None</ion-select-option>
+          <ion-label position="floating">Suit</ion-label>
+          <ion-select placeholder="Select suit">
+            <ion-select-option value="Clubs">Clubs</ion-select-option>
+            <ion-select-option value="Diamonds">Diamonds</ion-select-option>
+            <ion-select-option value="Hearts">Hearts</ion-select-option>
+            <ion-select-option value="Spades">Spades</ion-select-option>
+            <ion-select-option value="No Trump">No Trump</ion-select-option>
           </ion-select>
         </ion-item>
 
         <ion-item>
-          <ion-button router-link="'/join-tournament/input-score'" router-direction="forward" >Search</ion-button>
+          <ion-label position="floating">Tricks</ion-label>
+          <ion-select placeholder="Select tricks">
+            <ion-select-option value="7">7</ion-select-option>
+            <ion-select-option value="8">8</ion-select-option>
+            <ion-select-option value="9">9</ion-select-option>
+            <ion-select-option value="10">10</ion-select-option>
+            <ion-select-option value="11">11</ion-select-option>
+            <ion-select-option value="12">12</ion-select-option>
+            <ion-select-option value="13">13</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Declarer</ion-label>
+          <ion-select placeholder="Select declarer">
+            <ion-select-option value="North">North</ion-select-option>
+            <ion-select-option value="South">South</ion-select-option>
+            <ion-select-option value="East">East</ion-select-option>
+            <ion-select-option value="West">West</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-checkbox position="floating"></ion-checkbox>
+          <ion-label> Redoubled </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-text> Result and 1st card </ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Result:</ion-label>
+          <ion-input placeholder="Ik heb geen idee wat het resultaat zou kunnen zijn"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">1st card</ion-label>
+          <ion-input placeholder="Ik heb ook geen idee waarom het boeit wat de eerste kaart zou zijn"></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-button router-link="/join-tournament/scan-hand-south" router-direction="forward" >Next</ion-button>
         </ion-item>
 
       </ion-list>
@@ -67,10 +95,12 @@
           IonButton,
           IonBackButton,
           IonSelect,
-          IonSelectOption} from '@ionic/vue';
+          IonSelectOption,
+          IonCheckbox,
+          IonLabel} from '@ionic/vue';
 
   export default defineComponent({
-    name: 'WalkingSchemePage',
+    name: 'InputScorePage',
     components: {
       IonContent, 
       IonHeader, 
@@ -80,7 +110,9 @@
       IonButton,
       IonBackButton,
       IonSelect,
-      IonSelectOption
+      IonSelectOption,
+      IonCheckbox,
+      IonLabel
     },
     setup(){
       return{

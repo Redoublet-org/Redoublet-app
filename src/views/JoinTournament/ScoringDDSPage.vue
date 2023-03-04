@@ -5,62 +5,60 @@
         <ion-buttons slot="start">
           <ion-back-button default-href="/home" routerDirection="backward"></ion-back-button>
         </ion-buttons>
-        <ion-title>Name tournament</ion-title>
+        <ion-title>Scoring board #9</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Name tournament</ion-title>
+          <ion-title size="large">Scoring board #9</ion-title>
         </ion-toolbar>
       </ion-header>
 
       <ion-list>
         <ion-item>
-          <ion-text>Table: 3</ion-text>
-        </ion-item>
-
-        <ion-item>
-          <ion-text>Details</ion-text>
+          <ion-text>Contract: 2 spades</ion-text>
         </ion-item>
         <ion-item>
-          <ion-text>North - South</ion-text>
+          <ion-text>Result: +1</ion-text>
         </ion-item>
         <ion-item>
-          <ion-text>Pair [#]: name & name</ion-text>
+          <ion-text>Imp: +1</ion-text>
         </ion-item>
         <ion-item>
-          <ion-text>Board 11</ion-text>
+          <ion-text>By: NS</ion-text>
         </ion-item>
-
         <ion-item>
-          <ion-text> Game details </ion-text>
+          <ion-text>Score: +190</ion-text>
         </ion-item>
-
         <ion-item>
-          <ion-label position="floating">Vulnerable</ion-label>
-          <ion-select placeholder="Select vulnerability">
-            <ion-select-option value="North-South">North-South</ion-select-option>
-            <ion-select-option value="East-West">East-West</ion-select-option>
-            <ion-select-option value="None">None</ion-select-option>
-          </ion-select>
+          <ion-text>MP%: 55%</ion-text>
         </ion-item>
-
         <ion-item>
-          <ion-label position="floating">Dealer</ion-label>
-          <ion-select placeholder="Select dealer">
-            <ion-select-option value="North">North</ion-select-option>
-            <ion-select-option value="South">South</ion-select-option>
-            <ion-select-option value="East">East</ion-select-option>
-            <ion-select-option value="West">West</ion-select-option>
-          </ion-select>
+          <ion-text>DDS - theoretical optimum</ion-text>
         </ion-item>
-
         <ion-item>
-          <ion-button router-link="/join-tournament/input-score" router-direction="forward" >Enter score</ion-button>
+          <ion-text>Contract: 3 spades</ion-text>
         </ion-item>
-
+        <ion-item>
+          <ion-text>By: NS</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-text>Contract: 1 SA</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-text>By: EW</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-button>Dit zou een link moeten zijn</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button router-link="/join-tournament/walking-scheme" router-direction="forward" >Next board</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button router-link="/join-tournament/waiting-for-end" router-direction="forward" >This was the last board</ion-button>
+        </ion-item>
       </ion-list>
     </ion-content>
   </ion-page>
@@ -75,12 +73,10 @@
           IonTitle, 
           IonToolbar,
           IonButton,
-          IonBackButton,
-          IonSelect,
-          IonSelectOption} from '@ionic/vue';
+          IonBackButton} from '@ionic/vue';
 
   export default defineComponent({
-    name: 'WalkingSchemePage',
+    name: 'ScoringDDSPage',
     components: {
       IonContent, 
       IonHeader, 
@@ -88,9 +84,7 @@
       IonTitle, 
       IonToolbar,
       IonButton,
-      IonBackButton,
-      IonSelect,
-      IonSelectOption
+      IonBackButton
     },
     setup(){
       return{
