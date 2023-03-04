@@ -25,6 +25,8 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+  IonBackButton,
+  IonButtons
 } from "@ionic/vue";
 import { defineComponent } from "vue";
 import { useRouter } from "vue-router";
@@ -38,7 +40,9 @@ export default defineComponent({
     IonPage,
     IonTitle,
     IonToolbar,
-    PageTitle
+    PageTitle,
+    IonBackButton,
+    IonButtons
   },
   setup() {
     return { router: useRouter() };

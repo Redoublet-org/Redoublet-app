@@ -77,13 +77,13 @@
       </ion-item>
 
       <ion-item>
-        <ion-button @click="() => router.push('/new-tournament/board-dds')" router-direction="forward">
+        <ion-button @click="() => router.push('/active-tournament/single-table/dds')" router-direction="forward">
           Full DDS
         </ion-button>
-        <ion-button @click="() => router.push('/new-tournament/board-table')" router-direction="forward">
+        <ion-button @click="() => router.push('/active-tournament/single-table/table')" router-direction="forward">
           Scoring Table
         </ion-button>
-        <ion-button @click="() => router.push('/new-tournament/enter-board')" router-direction="forward">
+        <ion-button @click="() => router.push('/new-tournament/single-table/enter-board')" router-direction="forward">
           Next Board
         </ion-button>
       </ion-item>
@@ -115,6 +115,7 @@ export default defineComponent({
     IonToolbar,
     IonBackButton,
     IonButtons,
+    IonButton
   },
   setup() {
     return { router: useRouter() };

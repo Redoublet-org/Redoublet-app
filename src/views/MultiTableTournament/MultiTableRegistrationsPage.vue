@@ -27,21 +27,6 @@
                 <ion-col class="ion-text-center">{{ item.name1 }} & {{ item.name2 }}</ion-col>
             </ion-row>
         </ion-grid>
-
-  
-        <ion-item>
-          <ion-button router-link="/new-tournament/multiple-tables/registrations" router-direction="forward">
-            View Registrations
-          </ion-button>
-          <ion-button router-link="/new-tournament/multiple-tables" router-direction="back">
-            Adjust Tournament
-          </ion-button>
-        </ion-item>
-        <ion-item>
-            <ion-button router-link="/new-tournament/multiple-tables/registrations" router-direction="forward">
-                START TOURNAMENT
-            </ion-button>
-        </ion-item>
       </ion-content>
     </ion-page>
   </template>
