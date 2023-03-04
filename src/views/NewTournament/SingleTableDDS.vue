@@ -20,16 +20,15 @@
   </ion-page>
 </template>
 
-<script>
+<script lang="ts">
 import {
   IonContent,
   IonHeader,
   IonPage,
   IonTitle,
   IonToolbar,
-  IonButton,
 } from "@ionic/vue";
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 import { useRouter } from "vue-router";
 
 export default defineComponent({

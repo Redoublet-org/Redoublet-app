@@ -37,10 +37,7 @@
       <ion-item>
         <ion-label>Dealer</ion-label>
         <ion-select id="dealer" placeholder="Select dealer">
-          <ion-select-option value="n">North</ion-select-option>
-          <ion-select-option value="s">South</ion-select-option>
-          <ion-select-option value="e">East</ion-select-option>
-          <ion-select-option value="w">West</ion-select-option>
+          <ion-select-option :value="item" v-for="item of sides" :key="item">{{ item }}</ion-select-option>
         </ion-select>
       </ion-item>
 
@@ -62,13 +59,7 @@
       <ion-item>
         <ion-label>Tricks</ion-label>
         <ion-select id="tricks" placeholder="Enter Tricks">
-          <ion-select-option value="1">1</ion-select-option>
-          <ion-select-option value="2">2</ion-select-option>
-          <ion-select-option value="3">3</ion-select-option>
-          <ion-select-option value="4">4</ion-select-option>
-          <ion-select-option value="5">5</ion-select-option>
-          <ion-select-option value="6">6</ion-select-option>
-          <ion-select-option value="7">7</ion-select-option>
+          <ion-select-option :value="item" v-for="item of Array.from({length: 7}, (x, i) => i + 1)" :key="item">{{ item }}</ion-select-option>
         </ion-select>
       </ion-item>
 
@@ -84,10 +75,7 @@
       <ion-item>
         <ion-label>Declarer</ion-label>
         <ion-select id="declarer" placeholder="Select declarer">
-          <ion-select-option value="n">North</ion-select-option>
-          <ion-select-option value="s">South</ion-select-option>
-          <ion-select-option value="e">East</ion-select-option>
-          <ion-select-option value="w">West</ion-select-option>
+          <ion-select-option :value="item" v-for="item of sides" :key="item">{{ item }}</ion-select-option>
         </ion-select>
       </ion-item>
 
@@ -144,7 +132,6 @@ import {
   IonToolbar,
   IonBackButton,
   IonButtons,
-  IonButton,
 } from "@ionic/vue";
 import { defineComponent } from "vue";
 import { useRouter, useRoute } from "vue-router";
@@ -186,6 +173,7 @@ export default defineComponent({
         "Ace",
       ],
       cardSuits: ["Clubs", "Spades", "Hearts", "Diamonds"],
+      sides: ["North", "South", "East", "West"]
     };
   },
 });

@@ -40,7 +40,7 @@
             Start Game
         </ion-button>
         <ion-item>
-          <ion-button router-link="/home" router-direction="backward">
+          <ion-button router-link="/home" router-direction="back">
             Back
           </ion-button>
         </ion-item>
@@ -59,17 +59,19 @@
     IonButtons,
     IonButton,
   } from "@ionic/vue";
-  import { defineComponent, ref } from "vue";
+  import { defineComponent } from "vue";
   import { useRouter, Router} from "vue-router";
   import { TableInformation, ScoringPrincipleFromString } from "./TableInformation";
   
   function gotoScanBoard(router: Router) {
     const tableInfo: TableInformation = {
-      northName: document.getElementById("northName")?.value as string,
-      southName: document.getElementById("southName")?.value as string,
-      westName:  document.getElementById("westName")?.value as string,
-      eastName:  document.getElementById("eastName")?.value as string,
-      scoringPrinciple: ScoringPrincipleFromString(document.getElementById("scoringPrinciple")?.value)
+      // TODO: fix this mess but idk how to link this properly in vue
+      northName: (document.getElementById("northName") as HTMLInputElement)?.value as string,
+      southName: (document.getElementById("southName") as HTMLInputElement)?.value as string,
+      westName:  (document.getElementById("westName") as HTMLInputElement)?.value as string,
+      eastName:  (document.getElementById("eastName") as HTMLInputElement)?.value as string,
+      scoringPrinciple: ScoringPrincipleFromString(
+        (document.getElementById("scoringPrinciple") as HTMLInputElement)?.value)
     };
     router.push({name: 'EnterBoardPage', params: {tableSettings: JSON.stringify(tableInfo)}})
   }
@@ -89,7 +91,6 @@
     setup() {
       return { router: useRouter(), gotoScanBoard };
     },
-    
   });
   </script>
   
