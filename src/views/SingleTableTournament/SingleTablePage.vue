@@ -13,7 +13,7 @@
       </ion-header>
       
       <ion-content>
-        <h1>1 Table (2 VS 2)</h1>
+        <page-title title="1 Table (2 VS 2)"></page-title>
         <h2>Couple 1 North / South</h2>
         <ion-item>
             <ion-label>N: </ion-label>
@@ -62,6 +62,7 @@
   import { defineComponent } from "vue";
   import { useRouter, Router} from "vue-router";
   import { TableInformation, ScoringPrincipleFromString } from "./TableInformation";
+  import PageTitle from "@/components/PageTitle.vue";
   
   function gotoScanBoard(router: Router) {
     const tableInfo: TableInformation = {
@@ -87,6 +88,7 @@
       IonBackButton,
       IonButtons,
       IonButton,
+      PageTitle
     },
     setup() {
       return { router: useRouter(), gotoScanBoard };

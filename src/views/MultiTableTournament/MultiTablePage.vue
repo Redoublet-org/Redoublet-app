@@ -13,9 +13,7 @@
     </ion-header>
 
     <ion-content>
-      <ion-text color="primary">
-        <h1>New Tournament with Multiple Tables</h1>
-      </ion-text>
+      <page-title title="New Tournament with Multiple Tables"></page-title>
 
       <ion-item>
         <ion-label>Tournament Name</ion-label>
@@ -73,7 +71,7 @@
           >
             {{ item }}
           </ion-select-option>
-        </ion-select>>
+        </ion-select>
       </ion-item>
       <ion-item>
         <ion-label>Number of Winners</ion-label>
@@ -106,6 +104,7 @@ import {
 } from "@ionic/vue";
 import { defineComponent } from "vue";
 import { useRouter } from "vue-router";
+import PageTitle from "@/components/PageTitle.vue";
 
 export default defineComponent({
   name: "MultiTablePage",
@@ -119,7 +118,8 @@ export default defineComponent({
     IonButtons,
     // eslint-disable-next-line vue/no-unused-components
     IonButton,
-    IonInput
+    IonInput,
+    PageTitle
   },
   setup() {
     return { router: useRouter() };

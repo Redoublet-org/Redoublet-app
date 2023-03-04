@@ -13,14 +13,12 @@
       </ion-header>
   
       <ion-content>
-        <ion-text color="primary">
-          <h1>SCORE TABLE EXAMPLE</h1>
-        </ion-text>
+        <page-title title="SCORE TABLE EXAMPLE"></page-title>
       </ion-content>
     </ion-page>
   </template>
   
-  <script>
+<script lang="ts">
   import {
     IonContent,
     IonHeader,
@@ -31,6 +29,7 @@
   } from "@ionic/vue";
   import { defineComponent, ref } from "vue";
   import { useRouter } from "vue-router";
+  import PageTitle from "@/components/PageTitle.vue";
   
   export default defineComponent({
     name: "HomePage",
@@ -40,6 +39,7 @@
       IonPage,
       IonTitle,
       IonToolbar,
+      PageTitle
     },
     setup() {
       return { router: useRouter() };

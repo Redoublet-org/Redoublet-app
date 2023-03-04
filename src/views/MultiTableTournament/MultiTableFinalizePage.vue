@@ -13,9 +13,7 @@
       </ion-header>
   
       <ion-content>
-        <ion-text color="primary">
-          <h1>{{ tournamentName }}</h1>
-        </ion-text>
+        <page-title :title="tournamentName"></page-title>
         <ion-text color="secondary">
           <h2>View Registrations</h2>
         </ion-text>
@@ -56,6 +54,7 @@
   } from "@ionic/vue";
   import { defineComponent } from "vue";
   import { useRouter } from "vue-router";
+  import PageTitle from "@/components/PageTitle.vue"
   
   export default defineComponent({
     name: "MultiTableFinalizePage",
@@ -69,6 +68,7 @@
       IonButtons,
       // eslint-disable-next-line vue/no-unused-components
       IonButton,
+      PageTitle
     },
     setup() {
       return { router: useRouter() };

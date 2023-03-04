@@ -13,6 +13,7 @@
     </ion-header>
 
     <ion-content>
+      <page-title title="Create new tournament"></page-title>
       <ion-list>
         <ion-item>
           <ion-button router-link="/new-tournament/single-table" router-direction="forward">
@@ -50,6 +51,7 @@ import {
 } from "@ionic/vue";
 import { defineComponent } from "vue";
 import { useRouter } from "vue-router";
+import PageTitle from "@/components/PageTitle.vue";
 
 export default defineComponent({
   name: "NewTourPage",
@@ -62,6 +64,7 @@ export default defineComponent({
     IonBackButton,
     IonButtons,
     IonButton,
+    PageTitle
   },
   setup() {
     return { router: useRouter() };

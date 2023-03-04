@@ -13,9 +13,7 @@
     </ion-header>
 
     <ion-content>
-      <ion-text color="primary">
-        <h1>Board #1</h1>
-      </ion-text>
+      <page-title :title="'Board #' + boardNumber"></page-title>
       <ion-text color="medium">
         <h3>
           N: {{ tableInfo.northName }}, S: {{ tableInfo.southName }} <br />
@@ -132,10 +130,12 @@ import {
   IonToolbar,
   IonBackButton,
   IonButtons,
+  IonButton
 } from "@ionic/vue";
 import { defineComponent } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { TableInformation } from "./TableInformation";
+import PageTitle from "@/components/PageTitle.vue";
 
 export default defineComponent({
   name: "EnterBoardPage",
@@ -147,6 +147,8 @@ export default defineComponent({
     IonToolbar,
     IonBackButton,
     IonButtons,
+    PageTitle,
+    IonButton
   },
   setup() {
     const route = useRoute();
@@ -173,7 +175,8 @@ export default defineComponent({
         "Ace",
       ],
       cardSuits: ["Clubs", "Spades", "Hearts", "Diamonds"],
-      sides: ["North", "South", "East", "West"]
+      sides: ["North", "South", "East", "West"],
+      boardNumber: 1
     };
   },
 });

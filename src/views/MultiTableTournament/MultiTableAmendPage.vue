@@ -13,9 +13,7 @@
       </ion-header>
   
       <ion-content>
-        <ion-text color="primary">
-          <h1>{{ tournamentName }}</h1>
-        </ion-text>
+        <page-title :title="tournamentName"></page-title>
         <ion-text color="secondary">
           <h2>Amend Scoring</h2>
         </ion-text>
@@ -71,6 +69,7 @@
   } from "@ionic/vue";
   import { defineComponent } from "vue";
   import { useRouter } from "vue-router";
+  import PageTitle from "@/components/PageTitle.vue";
   
   export default defineComponent({
     name: "MultiTableAmendPage",
@@ -83,7 +82,8 @@
       IonBackButton,
       IonButtons,
       IonButton,
-      IonInput
+      IonInput,
+      PageTitle
     },
     setup() {
       return { router: useRouter() };
