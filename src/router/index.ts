@@ -35,28 +35,28 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/new-tournament/single-table',
     name: 'SingleTablePage',
-    component: () => import("@/views/NewTournament/SingleTablePage.vue")
+    component: () => import("@/views/SingleTableTournament/SingleTablePage.vue")
   },
   {
     path: '/new-tournament/enter-board/:tableSettings',
     name: 'EnterBoardPage',
-    component: () => import("@/views/NewTournament/EnterBoardPage.vue"),
+    component: () => import("@/views/SingleTableTournament/EnterBoardPage.vue"),
     props: true
   },
   {
     path: '/new-tournament/board-score',
     name: 'SingleTableScore',
-    component: () => import("@/views/NewTournament/SingleTableScore.vue")
+    component: () => import("@/views/SingleTableTournament/SingleTableScore.vue")
   },
   {
     path: '/new-tournament/board-dds',
     name: 'SingleTableDDS',
-    component: () => import("@/views/NewTournament/SingleTableDDS.vue")
+    component: () => import("@/views/SingleTableTournament/SingleTableDDS.vue")
   },
   {
     path: '/new-tournament/board-table',
     name: 'Table',
-    component: () => import("@/views/NewTournament/SingleTableScoreTable.vue")
+    component: () => import("@/views/SingleTableTournament/SingleTableScoreTable.vue")
   },
   {
     path: '/join-tournament',
