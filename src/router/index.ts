@@ -3,9 +3,9 @@ import { RouteRecordRaw } from 'vue-router';
 import LoginPage from '../views/LoginPage.vue';
 import HomePage from '../views/HomePage.vue';
 import RegisterPage from '../views/RegisterPage.vue';
-import NewCompPage from '../views/NewCompPage.vue'
 import JoinTourPage from '../views/JoinTourPage.vue'
 import ScanPage from '../views/ScanPage.vue'
+import NewTourPage from '../views/NewTourPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -30,7 +30,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/new-tournament',
     name: 'NewTournamentPage',
-    component: () => import("@/views/NewTourPage.vue")
+    component: NewTourPage
   },
   {
     path: '/new-tournament/single-table',

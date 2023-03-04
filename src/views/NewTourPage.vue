@@ -29,7 +29,7 @@
 
     <ion-content ref="content">
       <ion-item>
-        <ion-button router-link="/home" router-direction="backward">
+        <ion-button router-link="/home" router-direction="back">
           Back
         </ion-button>
       </ion-item>
@@ -37,7 +37,7 @@
   </ion-page>
 </template>
 
-<script>
+<script lang="ts">
 import {
   IonContent,
   IonHeader,
