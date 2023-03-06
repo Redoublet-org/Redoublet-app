@@ -1,3 +1,4 @@
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
@@ -22,6 +23,8 @@ import '@ionic/vue/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+
+defineCustomElements(window); //ik weet niet zeker waar dit moet? Misschien is dit gewoon prima
 
 const app = createApp(App)
   .use(IonicVue)
