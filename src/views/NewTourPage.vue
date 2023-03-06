@@ -27,14 +27,6 @@
         </ion-item>
       </ion-list>
     </ion-content>
-
-    <ion-content ref="content">
-      <ion-item>
-        <ion-button router-link="/home" router-direction="back">
-          Back
-        </ion-button>
-      </ion-item>
-    </ion-content>
   </ion-page>
 </template>
 
