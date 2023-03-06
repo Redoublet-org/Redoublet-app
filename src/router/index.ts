@@ -1,11 +1,13 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
+import { routes as sttRoutes } from "./single-table-tour"
+import { routes as mttRoutes } from './multi-table-tour' 
 import LoginPage from '../views/LoginPage.vue';
 import HomePage from '../views/HomePage.vue';
 import RegisterPage from '../views/RegisterPage.vue';
-import NewCompPage from '../views/NewCompPage.vue';
-import JoinTourPage from '../views/JoinTourPage.vue';
-import ScanPage from '../views/ScanPage.vue';
+import JoinTourPage from '../views/JoinTourPage.vue'
+import ScanPage from '../views/ScanPage.vue'
+import NewTourPage from '../views/NewTourPage.vue'
 
 import SearchTourPage from '../views/JoinTournament/SearchTourPage.vue';
 import OpenToursPage from '../views/JoinTournament/OpenToursPage.vue';
@@ -41,9 +43,9 @@ const routes: Array<RouteRecordRaw> = [
     component: RegisterPage
   },
   {
-    path: '/new-competition',
-    name: 'NewCompetition',
-    component: NewCompPage
+    path: '/new-tournament',
+    name: 'NewTournamentPage',
+    component: NewTourPage
   },
   {
     path: '/join-tournament',
@@ -115,12 +117,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'TournamentEnded',
     component: TourEndedPage
   }
-
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes: [routes, sttRoutes, mttRoutes].flat(1)
 })
 
 export default router
