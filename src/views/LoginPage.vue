@@ -21,15 +21,15 @@
 
         <ion-item>
           <ion-label position="floating">Password</ion-label>
-          <ion-input type = "password" placeholder="Enter password"></ion-input>
+          <ion-input type="password" placeholder="Enter password"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-button router-link="/home" router-direction="forward" >Login</ion-button>
+          <ion-button router-link="/home" router-direction="forward">Login</ion-button>
         </ion-item>
 
         <ion-item>
-          <ion-button router-link="/register" router-direction="forward" >Register</ion-button>
+          <ion-button router-link="/register" router-direction="forward">Register</ion-button>
         </ion-item>
 
       </ion-list>
@@ -37,39 +37,21 @@
   </ion-page>
 </template>
 
-<script>
-  import { useRouter } from 'vue-router';
-  import { defineComponent } from 'vue';
-  import { IonContent, 
-          IonHeader, 
-          IonPage, 
-          IonTitle, 
-          IonToolbar,
-          IonButton } from '@ionic/vue';
-
-  export default defineComponent({
-    name: 'LoginPage',
-    components: {
-      IonContent, 
-      IonHeader, 
-      IonPage, 
-      IonTitle, 
-      IonToolbar,
-      IonButton
-    },
-    setup(){
-      return{
-        router: useRouter(),
-      }
-    }
-  });
-
+<script setup lang="ts">
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonButton
+} from '@ionic/vue';
 </script>
 
 <style scoped>
 #container {
   text-align: center;
-  
+
   position: absolute;
   left: 0;
   right: 0;
@@ -85,9 +67,9 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-  
+
   color: #8c8c8c;
-  
+
   margin: 0;
 }
 

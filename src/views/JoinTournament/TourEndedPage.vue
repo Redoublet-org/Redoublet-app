@@ -44,50 +44,31 @@
       </ion-grid>
 
       <ion-item>
-          <ion-button>Show details</ion-button>
+        <ion-button>Show details</ion-button>
       </ion-item>
       <ion-item>
-          <ion-button router-link="/home" router-direction="forward">Go back to home</ion-button>
+        <ion-button router-link="/home" router-direction="forward">Go back to home</ion-button>
       </ion-item>
     </ion-content>
   </ion-page>
 </template>
 
-<script>
-  import { useRouter } from 'vue-router';
-  import { defineComponent } from 'vue';
-  import { IonContent, 
-          IonHeader, 
-          IonPage, 
-          IonTitle, 
-          IonToolbar,
-          IonButton,
-          IonBackButton} from '@ionic/vue';
-
-  export default defineComponent({
-    name: 'TourEndedPage',
-    components: {
-      IonContent, 
-      IonHeader, 
-      IonPage, 
-      IonTitle, 
-      IonToolbar,
-      IonButton,
-      IonBackButton
-    },
-    setup(){
-      return{
-        router: useRouter(),
-      }
-    }
-  });
-
+<script setup lang="ts">
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonButton,
+  IonBackButton
+} from '@ionic/vue';
 </script>
 
 <style scoped>
 #container {
   text-align: center;
-  
+
   position: absolute;
   left: 0;
   right: 0;
@@ -103,9 +84,9 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-  
+
   color: #8c8c8c;
-  
+
   margin: 0;
 }
 

@@ -4,18 +4,11 @@
   </ion-text>
 </template>
 
-<script lang="ts">
-  import {
-    IonContent,
-    IonText
-  } from "@ionic/vue";
-  import { defineComponent } from "vue";
-  
-  export default defineComponent({
-    name: "PageTitle",
-    components: {
-      IonText
-    },
-    props: ['title']
-  });
-  </script>
+<script setup lang="ts">
+import {
+  IonText
+} from "@ionic/vue";
+import { ref } from "vue";
+
+const title = ref("");
+</script>
