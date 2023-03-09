@@ -76,7 +76,7 @@
 
 
         <ion-item>
-          <ion-button router-link="/join-tournament/scan-hand-south" router-direction="forward" >Next</ion-button>
+          <ion-button router-link="/join-tournament/scan-hand-south" router-direction="forward">Next</ion-button>
         </ion-item>
 
       </ion-list>
@@ -84,49 +84,26 @@
   </ion-page>
 </template>
 
-<script>
-  import { useRouter } from 'vue-router';
-  import { defineComponent } from 'vue';
-  import { IonContent, 
-          IonHeader, 
-          IonPage, 
-          IonTitle, 
-          IonToolbar,
-          IonButton,
-          IonBackButton,
-          IonSelect,
-          IonSelectOption,
-          IonCheckbox,
-          IonLabel} from '@ionic/vue';
-
-  export default defineComponent({
-    name: 'InputScorePage',
-    components: {
-      IonContent, 
-      IonHeader, 
-      IonPage, 
-      IonTitle, 
-      IonToolbar,
-      IonButton,
-      IonBackButton,
-      IonSelect,
-      IonSelectOption,
-      IonCheckbox,
-      IonLabel
-    },
-    setup(){
-      return{
-        router: useRouter(),
-      }
-    }
-  });
-
+<script setup lang="ts">
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonButton,
+  IonBackButton,
+  IonSelect,
+  IonSelectOption,
+  IonCheckbox,
+  IonLabel
+} from '@ionic/vue';
 </script>
 
 <style scoped>
 #container {
   text-align: center;
-  
+
   position: absolute;
   left: 0;
   right: 0;
@@ -142,9 +119,9 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-  
+
   color: #8c8c8c;
-  
+
   margin: 0;
 }
 

@@ -54,51 +54,33 @@
           <ion-button>Dit zou een link moeten zijn</ion-button>
         </ion-item>
         <ion-item>
-          <ion-button router-link="/join-tournament/walking-scheme" router-direction="forward" >Next board</ion-button>
+          <ion-button router-link="/join-tournament/walking-scheme" router-direction="forward">Next board</ion-button>
         </ion-item>
         <ion-item>
-          <ion-button router-link="/join-tournament/waiting-for-end" router-direction="forward" >This was the last board</ion-button>
+          <ion-button router-link="/join-tournament/waiting-for-end" router-direction="forward">This was the last
+            board</ion-button>
         </ion-item>
       </ion-list>
     </ion-content>
   </ion-page>
 </template>
 
-<script>
-  import { useRouter } from 'vue-router';
-  import { defineComponent } from 'vue';
-  import { IonContent, 
-          IonHeader, 
-          IonPage, 
-          IonTitle, 
-          IonToolbar,
-          IonButton,
-          IonBackButton} from '@ionic/vue';
-
-  export default defineComponent({
-    name: 'ScoringDDSPage',
-    components: {
-      IonContent, 
-      IonHeader, 
-      IonPage, 
-      IonTitle, 
-      IonToolbar,
-      IonButton,
-      IonBackButton
-    },
-    setup(){
-      return{
-        router: useRouter(),
-      }
-    }
-  });
-
+<script setup lang="ts">
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonButton,
+  IonBackButton
+} from '@ionic/vue';
 </script>
 
 <style scoped>
 #container {
   text-align: center;
-  
+
   position: absolute;
   left: 0;
   right: 0;
@@ -114,13 +96,12 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-  
+
   color: #8c8c8c;
-  
+
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
-}
-</style>
+}</style>

@@ -3,10 +3,7 @@
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
-          <ion-back-button
-            default-href="/home"
-            routerDirection="backward"
-          ></ion-back-button>
+          <ion-back-button default-href="/home" routerDirection="backward"></ion-back-button>
         </ion-buttons>
         <ion-title>DDS</ion-title>
       </ion-toolbar>
@@ -18,7 +15,7 @@
   </ion-page>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import {
   IonContent,
   IonHeader,
@@ -28,24 +25,5 @@ import {
   IonBackButton,
   IonButtons
 } from "@ionic/vue";
-import { defineComponent } from "vue";
-import { useRouter } from "vue-router";
 import PageTitle from "@/components/PageTitle.vue";
-
-export default defineComponent({
-  name: "HomePage",
-  components: {
-    IonContent,
-    IonHeader,
-    IonPage,
-    IonTitle,
-    IonToolbar,
-    PageTitle,
-    IonBackButton,
-    IonButtons
-  },
-  setup() {
-    return { router: useRouter() };
-  },
-});
 </script>
