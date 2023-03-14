@@ -26,4 +26,3 @@ import {
   IonButtons
 } from "@ionic/vue";
 </script>
-  

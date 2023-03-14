@@ -25,7 +25,6 @@
           <ion-text>List of cards detected:</ion-text>
         </ion-item>
 
-
         <ion-item>
           <ion-button router-link="/join-tournament/scan-hand-north" router-direction="forward">Cards are correct, next
             hand</ion-button>
@@ -75,4 +74,5 @@ import {
 
 #container a {
   text-decoration: none;
-}</style>
+}
+</style>

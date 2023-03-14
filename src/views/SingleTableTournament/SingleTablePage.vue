@@ -81,4 +81,3 @@ function gotoScanBoard(router: Router) {
 
 }
 </script>
-  

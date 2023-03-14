@@ -1,11 +1,11 @@
-import { RouteRecordRaw } from 'vue-router';
-import MultiTablePage from '../views/MultiTableTournament/MultiTablePage.vue'
-import MultiTableWaitingPage from '../views/MultiTableTournament/MultiTableWaitingPage.vue'
-import MultiTableRegistrationsPage from '../views/MultiTableTournament/MultiTableRegistrationsPage.vue'
-import MultiTableActivePage from '../views/MultiTableTournament/MultiTableActivePage.vue'
-import MultiTableMovementPage from '../views/MultiTableTournament/MultiTableMovementPage.vue'
-import MultiTableAmendPage from '../views/MultiTableTournament/MultiTableAmendPage.vue'
-import MultiTableFinalizePage from '../views/MultiTableTournament/MultiTableFinalizePage.vue'
+import { RouteRecordRaw } from "vue-router";
+import MultiTablePage from "../views/MultiTableTournament/MultiTablePage.vue"
+import MultiTableWaitingPage from "../views/MultiTableTournament/MultiTableWaitingPage.vue"
+import MultiTableRegistrationsPage from "../views/MultiTableTournament/MultiTableRegistrationsPage.vue"
+import MultiTableActivePage from "../views/MultiTableTournament/MultiTableActivePage.vue"
+import MultiTableMovementPage from "../views/MultiTableTournament/MultiTableMovementPage.vue"
+import MultiTableAmendPage from "../views/MultiTableTournament/MultiTableAmendPage.vue"
+import MultiTableFinalizePage from "../views/MultiTableTournament/MultiTableFinalizePage.vue"
 
 export const routes: Array<RouteRecordRaw> = [
     ///
@@ -49,4 +49,4 @@ export const routes: Array<RouteRecordRaw> = [
         name: "MultiTableFinalizePage",
         component: MultiTableFinalizePage
     }
-]
+];
